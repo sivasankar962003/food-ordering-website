@@ -1,4 +1,4 @@
-import express, { response } from "express";
+import express from "express";
 import env from "dotenv";
 import pg from "pg";
 import bodyParser from "body-parser";
@@ -6,7 +6,7 @@ import cors from "cors";
 import bcrypt from "bcrypt";
 import cookieParser from "cookie-parser";
 import cookieSession from "cookie-session";
-import cloudinary from "./cloudinary.js";
+import cloudinary from "../cloudinary.js";
 
 
 
@@ -535,9 +535,9 @@ res.json({customer1:customer.rows[0].count,category1:category.rows[0].count,reve
 })
 
 
-
-const server=app.listen(process.env.PORT1, () => {
+if(process.env.NODE_ENV!=="production"){
+app.listen(process.env.PORT1, () => {
   console.log("Server run on PORT " + process.env.PORT1);
 });
-
-export default server;
+}
+export default app;
