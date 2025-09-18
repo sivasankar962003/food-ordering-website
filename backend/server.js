@@ -5,7 +5,7 @@ import bodyParser from "body-parser";
 import cors from "cors";
 import bcrypt from "bcrypt";
 import cookieParser from "cookie-parser";
-import session from "express-session";
+import cookieSession from "cookie-session";
 import cloudinary from "./cloudinary.js";
 
 
@@ -26,15 +26,17 @@ app.use(cors({
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.json({limit:"10mb"}))
-app.use(session({
-secret:"secret",
-resave:false,
-saveUninitialized:false,
-cookie:{
-    maxAge:1000*60*60
-}
 
-}))
+
+app.use(cookieSession({
+  name: "session",
+  keys: [process.env.SESSION_SECRET || "defaultSecret"],
+  maxAge: 60 * 60 * 1000, // 1 hour
+  secure: process.env.NODE_ENV === "production", // HTTPS only in production
+  httpOnly: true,
+  sameSite: "lax"
+}));
+app.set("trust proxy", 1);
 app.use(cookieParser());
 
 
@@ -533,10 +535,9 @@ res.json({customer1:customer.rows[0].count,category1:category.rows[0].count,reve
 })
 
 
-if(process.env.NODE_ENV!=="production")
-{
-app.listen(process.env.PORT1, () => {
+
+const server=app.listen(process.env.PORT1, () => {
   console.log("Server run on PORT " + process.env.PORT1);
 });
-}
+
 export default server;
