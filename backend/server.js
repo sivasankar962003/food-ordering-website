@@ -539,3 +539,4 @@ app.listen(process.env.PORT1, () => {
   console.log("Server run on PORT " + process.env.PORT1);
 });
 }
+export default server;
