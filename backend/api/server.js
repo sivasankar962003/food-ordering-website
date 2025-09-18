@@ -14,7 +14,7 @@ import cloudinary from "../cloudinary.js";
 const app = express();
 env.config();
 app.use(cors({
-    origin:['http://localhost:3000'],
+    origin:['https://food-ordering-website-5n6w.vercel.app/'],
     methods:["POST","GET","DELETE"],
     credentials:true
     
