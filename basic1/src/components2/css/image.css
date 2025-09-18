@@ -1,0 +1,26 @@
+.container {
+    margin-top: 50px;
+  display: grid;
+  gap:30px;
+  grid-template-columns: 1fr 1fr 1fr 1fr ;
+  grid-auto-rows: 1fr;
+}
+.box {
+    text-align: center;
+  width: 220px;
+  height: 250px;
+  border: 1px solid grey;
+}
+.food-title{
+margin:0;
+
+}
+.food-img{
+    margin-top: 10px;
+    text-align: center;
+    width: 180px;
+    height: 200px;
+
+    
+    border-radius: 5px;
+}

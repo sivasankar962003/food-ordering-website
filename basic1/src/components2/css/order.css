@@ -1,0 +1,41 @@
+.container2{
+    margin-left: 300px;
+    text-align: center;
+width:900px;
+height: 300px;
+
+
+}
+.order{
+width:700px;
+height: 250px;
+
+
+}
+.food-title{
+
+    margin-right: 70px;
+    padding: 5px;
+}
+.food-price{
+    margin-right: 90px;
+  font-weight: 600;
+    padding: 5px;
+}
+.img2{
+    float:left;
+    width: 200px;
+    height: 150px;
+    border-radius: 5px
+}
+.input-responsive{
+width:100px;
+
+}
+.btn{
+background-color: brown;
+color:white;
+margin-left: 30px;
+margin-top: 10px;
+
+}

@@ -1,0 +1,127 @@
+.container1{
+display: grid;
+gap:50px;
+grid-template-columns: 1fr 1fr;
+grid-auto-rows: 1fr;
+
+}
+.foodBox{
+     margin-left: 20px;
+     position: relative;
+     margin-right: 20px;
+    background-color: white;
+    border-radius: 5px;
+
+}
+.foodimg{
+    float:left;
+    margin-right: 25px;
+    border-radius: 5px;
+    width:200px;
+    height: 200px;
+}
+.foodtext{
+     
+    padding: 10px;
+}
+.foodprice{
+    padding: 0;
+
+}
+.foodpara{
+    font-size: 11pt;
+    height: 50px;
+}
+.foodButton{
+    font-size: 12pt;
+    color:white;
+    background-color: orange;
+    border:none;
+    padding: 5px 8px;
+    border-radius: 5px;
+    margin-right: 20px;
+}
+.foodButton:hover{
+    color:white;
+background-color: rgb(249, 10, 225)
+}
+.nutvalue{
+    margin-left: 5px;
+font-weight:200;
+color: black;
+
+}
+.list1>li>h5{
+   color: red;
+}
+.list1>li{
+    padding: 2px;
+    margin: 2px;
+}
+.list1{
+    list-style-type: none;
+    margin: 7px;
+
+}
+.foodtext1{
+
+    padding: 10px;
+    
+}
+.deleteicon{
+position: absolute;
+left:90%;
+top:6%;
+background-color: white;
+color: chocolate;
+border:none;
+}
+.deleteicon:hover{
+   
+color:grey; 
+}
+.divide{
+display: flex;
+gap:10px;
+justify-content: center;
+padding: 20px;
+margin: 20px;
+}
+.p1{
+  
+    width:300px;
+    height: 300px;
+    border-radius: 20px;
+    color:white;
+}
+.b1{
+
+    background-color:cadetblue ;
+}
+.b2{
+
+    background-color:rgb(23, 218, 107);
+}
+.b3{
+
+    background-color:rgb(223, 132, 13) ;
+}
+.b4{
+
+    background-color:rgb(113, 76, 237) ;
+}
+.custom{
+
+    text-align: center;
+    padding: 10px;
+    margin: 10px;
+    font-size: 30px;
+    
+}
+.custom1{
+    text-align: center;
+    padding: 10px;
+    margin: 10px;
+    margin-top: 40px;
+    font-size: 70px;
+}
