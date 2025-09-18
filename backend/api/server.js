@@ -13,12 +13,26 @@ import cloudinary from "../cloudinary.js";
 
 const app = express();
 env.config();
+
+const allowedOrigins = [
+  "https://food-ordering-website-5n6w.vercel.app", // your frontend
+  "http://localhost:3000" // dev
+];
+
+
+
 app.use(cors({
-    origin:['https://food-ordering-website-5n6w.vercel.app/'],
-    methods:["POST","GET","DELETE"],
-    credentials:true
-    
+  origin: function (origin, callback) {
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error("Not allowed by CORS"));
+    }
+  },
+  methods: ["GET", "POST", "DELETE", "OPTIONS"],
+  credentials: true
 }));
+
 
 
 
